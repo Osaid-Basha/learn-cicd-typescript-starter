@@ -8,6 +8,8 @@ import { handlerReadiness } from "./api/readiness.js";
 import { handlerNotesCreate, handlerNotesGet } from "./api/notes.js";
 import { handlerUsersCreate, handlerUsersGet } from "./api/users.js";
 
+let unused: string;
+
 const __dirname = path.resolve();
 
 if (!config.api.port) {
