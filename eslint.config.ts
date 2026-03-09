@@ -21,6 +21,6 @@ export default defineConfig(
       "no-unused-vars": "off",
       "@typescript-eslint/no-unused-vars": "error",
     },
-  },  
-  pluginSecurity.configs.recommended
+  },
+  pluginSecurity.configs.recommended,
 );
