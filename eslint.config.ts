@@ -2,7 +2,7 @@ import js from "@eslint/js";
 import globals from "globals";
 import tseslint from "typescript-eslint";
 import { defineConfig } from "eslint/config";
-
+import pluginSecurity from "eslint-plugin-security";
 export default defineConfig(
   {
     ignores: ["dist/**", "coverage/**", "node_modules/**"],
@@ -21,5 +21,6 @@ export default defineConfig(
       "no-unused-vars": "off",
       "@typescript-eslint/no-unused-vars": "error",
     },
-  },
+  },  
+  pluginSecurity.configs.recommended
 );
