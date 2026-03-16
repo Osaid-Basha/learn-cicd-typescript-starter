@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 {
   "name": "learn-cicd-typescript-starter",
   "version": "1.0.0",
@@ -44,6 +45,8 @@
   }
 }
 =======
+=======
+>>>>>>> 056043d (add)
 {
   "name": "learn-cicd-typescript-starter",
   "version": "1.0.0",
@@ -55,16 +58,33 @@
     "db:studio": "drizzle-kit studio",
     "build": "npx tsc",
     "start": "node dist/main.js",
+<<<<<<< HEAD
     "dev": "npx tsc && node dist/main.js"
+=======
+    "dev": "npx tsc && node dist/main.js",
+    "test": "vitest run",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+>>>>>>> 056043d (add)
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
     "@types/node": "^22.9.0",
+<<<<<<< HEAD
     "drizzle-kit": "^0.28.1",
     "globals": "^15.12.0",
     "tsx": "^4.19.2",
     "typescript": "^5.6.3"
+=======
+    "@vitest/coverage-v8": "^4.0.18",
+    "drizzle-kit": "^0.28.1",
+    "globals": "^15.12.0",
+    "prettier": "3.8.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vitest": "^4.0.18"
+>>>>>>> 056043d (add)
   },
   "dependencies": {
     "@libsql/client": "^0.14.0",
@@ -82,4 +102,7 @@
     "singleQuote": false
   }
 }
+<<<<<<< HEAD
 >>>>>>> e1b395e (Revert "Addtests")
+=======
+>>>>>>> 056043d (add)
