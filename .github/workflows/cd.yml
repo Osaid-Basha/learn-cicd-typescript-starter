@@ -30,7 +30,6 @@ jobs:
           project_id: qwiklabs-gcp-00-42fd4b2413f1
           service_account_key: ${{ secrets.GCP_CREDENTIALS }}
           export_default_credentials: true
-
       - name: Build and push Docker image
         run: |
           gcloud builds submit --tag us-docker.pkg.dev/qwiklabs-gcp-00-42fd4b2413f1/notely-ar-repo/notely:v1 .
