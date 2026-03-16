@@ -24,6 +24,7 @@ jobs:
       - name: Build
         run: npm run build
 
+
       - name: Authenticate to Google Cloud
         uses: google-github-actions/setup-gcloud@v2
         with:
@@ -34,3 +35,4 @@ jobs:
       - name: Build and push Docker image
         run: |
           gcloud builds submit --tag us-docker.pkg.dev/qwiklabs-gcp-00-42fd4b2413f1/notely-ar-repo/notely:v1 .
+
