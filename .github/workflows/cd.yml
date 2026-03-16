@@ -30,5 +30,7 @@ jobs:
           project_id: qwiklabs-gcp-03-efaa23e197d3
 
       - name: Build and push Docker image
-  run: |
-    gcloud builds submit --tag us-docker.pkg.dev/qwiklabs-gcp-03-efaa23e197d3/notely-ar-repo/notely:v1 . --suppress-logs
+        run: |
+          gcloud builds submit \
+          --tag us-docker.pkg.dev/qwiklabs-gcp-03-efaa23e197d3/notely-ar-repo/notely:v1 \
+          --async
