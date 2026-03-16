@@ -24,7 +24,6 @@ jobs:
       - name: Build
         run: npm run build
 
-
       - name: Authenticate to Google Cloud
         uses: google-github-actions/setup-gcloud@v2
         with:

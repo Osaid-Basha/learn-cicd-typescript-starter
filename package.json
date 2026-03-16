@@ -12,10 +12,8 @@
     "dev": "npx tsc && node dist/main.js",
     "test": "vitest run",
     "format": "prettier --write .",
-
     "format:check": "prettier --check .",
     "lint": "eslint ."
-
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -50,5 +48,4 @@
     "semi": true,
     "singleQuote": false
   }
-
 }
