@@ -21,13 +21,13 @@ jobs:
       - name: Set up gcloud
         uses: google-github-actions/setup-gcloud@v2
         with:
-          project_id: qwiklabs-gcp-04-0300f25ecc3d
+          project_id: qwiklabs-gcp-04-96c7117ddfbf
 
       - name: Deploy to Cloud Run
         run: |
           gcloud run deploy notely \
-            --image us-docker.pkg.dev/qwiklabs-gcp-04-0300f25ecc3d/notely-ar-repo/notely:v1 \
-            --region europe-west4 \
+            --image europe-docker.pkg.dev/qwiklabs-gcp-04-96c7117ddfbf/notely-ar-repo/notely:v2 \
+            --region us-west1 \
             --allow-unauthenticated \
-            --project qwiklabs-gcp-04-0300f25ecc3d \
+            --project qwiklabs-gcp-04-96c7117ddfbf \
             --max-instances=4
