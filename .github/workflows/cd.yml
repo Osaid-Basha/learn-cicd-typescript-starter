@@ -39,10 +39,10 @@ jobs:
           gcloud builds submit --tag us-docker.pkg.dev/qwiklabs-gcp-03-efaa23e197d3/notely-ar-repo/notely:v1 .
 
       - name: Deploy to Cloud Run
-  run: |
-    gcloud run deploy notely \
-      --image us-docker.pkg.dev/qwiklabs-gcp-03-efaa23e197d3/notely-ar-repo/notely:v1 \
-      --region us-central1 \
-      --allow-unauthenticated \
-      --project qwiklabs-gcp-03-efaa23e197d3 \
-      --max-instances=4
+        run: |
+          gcloud run deploy notely \
+            --image us-docker.pkg.dev/qwiklabs-gcp-03-efaa23e197d3/notely-ar-repo/notely:v1 \
+            --region us-central1 \
+            --allow-unauthenticated \
+            --project qwiklabs-gcp-03-efaa23e197d3 \
+            --max-instances=4
