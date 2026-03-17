@@ -13,17 +13,6 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v4
 
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build
-        run: npm run build
-
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
         with:
@@ -32,17 +21,13 @@ jobs:
       - name: Set up gcloud
         uses: google-github-actions/setup-gcloud@v2
         with:
-          project_id: qwiklabs-gcp-03-efaa23e197d3
-
-      - name: Build and push Docker image
-        run: |
-          gcloud builds submit --tag us-docker.pkg.dev/qwiklabs-gcp-03-efaa23e197d3/notely-ar-repo/notely:v1 .
+          project_id: qwiklabs-gcp-04-0300f25ecc3d
 
       - name: Deploy to Cloud Run
         run: |
           gcloud run deploy notely \
-            --image us-docker.pkg.dev/qwiklabs-gcp-03-efaa23e197d3/notely-ar-repo/notely:v1 \
-            --region us-central1 \
+            --image us-docker.pkg.dev/qwiklabs-gcp-04-0300f25ecc3d/notely-ar-repo/notely:v1 \
+            --region europe-west4 \
             --allow-unauthenticated \
-            --project qwiklabs-gcp-03-efaa23e197d3 \
+            --project qwiklabs-gcp-04-0300f25ecc3d \
             --max-instances=4
